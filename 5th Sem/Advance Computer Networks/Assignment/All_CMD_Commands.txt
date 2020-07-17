@@ -1,0 +1,246 @@
+he authenticity of host '104.211.224.31 (104.211.224.31)' can't be established.
+ECDSA key fingerprint is SHA256:MqrFuAvoan7VFKDXI0lcwsJWywQgYqcrvt8KOHWkcvE.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '104.211.224.31' (ECDSA) to the list of known hosts.
+2017hw86656@104.211.224.31's password:
+Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.15.0-1066-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+121 packages can be updated.
+0 updates are security updates.
+
+New release '18.04.4 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+2017hw86656@BITSCSUBUNTUSSH:~$ ls
+2017hw86656@BITSCSUBUNTUSSH:~$ vi tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ vi tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ vi tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ tcpvariant.tcl
+tcpvariant.tcl: command not found
+2017hw86656@BITSCSUBUNTUSSH:~$ ns2 tcpvariant.tcl
+No command 'ns2' found, did you mean:
+ Command 'nse' from package 'ns2' (universe)
+ Command 'ns6' from package 'ipv6toolkit' (universe)
+ Command 'nsd' from package 'nsd' (universe)
+ Command 'ns' from package 'ns2' (universe)
+ns2: command not found
+2017hw86656@BITSCSUBUNTUSSH:~$ ns tcpvariant.tcl
+invalid command name "renoset"
+    while executing
+"renoset TCP_Variant "Agent/TCP/Linux""
+    (file "tcpvariant.tcl" line 1)
+2017hw86656@BITSCSUBUNTUSSH:~$ vi tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ ns tcpvariant.tcl
+invalid command name "renoset"
+    while executing
+"renoset TCP_Variant "Agent/TCP/Linux""
+    (file "tcpvariant.tcl" line 1)
+2017hw86656@BITSCSUBUNTUSSH:~$ vi tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ ns tcpvariant.tcl
+start
+cmd select_ca reno
+2017hw86656@BITSCSUBUNTUSSH:~$ ls
+reno-configuration  reno-result0  tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ vi gnuplot.txt
+2017hw86656@BITSCSUBUNTUSSH:~$ gnuplot
+
+        G N U P L O T
+        Version 5.0 patchlevel 3    last modified 2016-02-21
+
+        Copyright (C) 1986-1993, 1998, 2004, 2007-2016
+        Thomas Williams, Colin Kelley and many others
+
+        gnuplot home:     http://www.gnuplot.info
+        faq, bugs, etc:   type "help FAQ"
+        immediate help:   type "help"  (plot window: hit 'h')
+
+Terminal type set to 'qt'
+gnuplot> set term png
+Terminal type set to 'png'
+Options are 'nocrop enhanced size 640,480 font "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf,12" '
+gnuplot> set out "reno-cwnd.png"
+gnuplot> set xrange [0:500]
+gnuplot> set yrange [0:2500]
+gnuplot> plot "reno-result0" u 1:2 w li
+gnuplot> exit
+2017hw86656@BITSCSUBUNTUSSH:~$ ls
+gnuplot.txt  reno-configuration  reno-cwnd.png  reno-result0  tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ vi tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ vi gnuplot.txt
+2017hw86656@BITSCSUBUNTUSSH:~$ vi tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ ns tcpvariant.tcl
+start
+cmd select_ca compound
+0x1f1c9a0 resizing timestamp table
+0x1f1c9a0 resizing timestamp table
+0x1f1c9a0 resizing timestamp table
+0x1f1c9a0 resizing timestamp table
+0x1f1c9a0 resizing timestamp table
+2017hw86656@BITSCSUBUNTUSSH:~$ ls
+compound-configuration  gnuplot.txt         reno-cwnd.png  tcpvariant.tcl
+compound-result0        reno-configuration  reno-result0
+2017hw86656@BITSCSUBUNTUSSH:~$ vi gnuplot.txt
+2017hw86656@BITSCSUBUNTUSSH:~$ vi gnuplot.txt
+2017hw86656@BITSCSUBUNTUSSH:~$ gnuplot
+
+        G N U P L O T
+        Version 5.0 patchlevel 3    last modified 2016-02-21
+
+        Copyright (C) 1986-1993, 1998, 2004, 2007-2016
+        Thomas Williams, Colin Kelley and many others
+
+        gnuplot home:     http://www.gnuplot.info
+        faq, bugs, etc:   type "help FAQ"
+        immediate help:   type "help"  (plot window: hit 'h')
+
+Terminal type set to 'qt'
+gnuplot> set term
+
+Available terminal types:
+       cairolatex  LaTeX picture environment using graphicx package and Cairo backend
+           canvas  HTML Canvas object
+              cgm  Computer Graphics Metafile
+          context  ConTeXt with MetaFun (for PDF documents)
+            corel  EPS format for CorelDRAW
+             dumb  ascii art for anything that prints text
+              dxf  dxf-file for AutoCad (default size 120x80)
+            eepic  EEPIC -- extended LaTeX picture environment
+              emf  Enhanced Metafile format
+            emtex  LaTeX picture environment with emTeX specials
+         epscairo  eps terminal based on cairo
+         epslatex  LaTeX picture environment using graphicx package
+              fig  FIG graphics language for XFIG graphics editor
+              gif  GIF images using libgd and TrueType fonts
+             hpgl  HP7475 and relatives [number of pens] [eject]
+             jpeg  JPEG images using libgd and TrueType fonts
+            latex  LaTeX picture environment
+              lua  Lua generic terminal driver
+               mf  Metafont plotting standard
+               mp  MetaPost plotting standard
+             pcl5  HP Designjet 750C, HP Laserjet III/IV, etc. (many options)
+Press return for more: png
+         pdfcairo  pdf terminal based on cairo
+              png  PNG images using libgd and TrueType fonts
+         pngcairo  png terminal based on cairo
+       postscript  PostScript graphics, including EPSF embedded files (*.eps)
+          pslatex  LaTeX picture environment with PostScript \specials
+            pstex  plain TeX with PostScript \specials
+         pstricks  LaTeX picture environment with PSTricks macros
+              qms  QMS/QUIC Laser printer (also Talaris 1200 and others)
+               qt  Qt terminal
+              svg  W3C Scalable Vector Graphics
+          tek40xx  Tektronix 4010 and others; most TEK emulators
+          tek410x  Tektronix 4106, 4107, 4109 and 420X terminals
+          texdraw  LaTeX texdraw environment
+             tgif  TGIF X11 [mode] [x,y] [dashed] ["font" [fontsize]]
+             tikz  TeX TikZ graphics macros via the lua script driver
+         tkcanvas  Tk canvas widget
+             tpic  TPIC -- LaTeX picture environment with tpic \specials
+          unknown  Unknown terminal type - not a plotting device
+            vttek  VT-like tek40xx terminal emulator
+              wxt  wxWidgets cross-platform windowed terminal
+              x11  X11 Window System
+             xlib  X11 Window System (gnulib_x11 dump)
+Press return for more: retunr
+            xterm  Xterm Tektronix 4014 Mode
+gnuplot> set term png
+Terminal type set to 'png'
+Options are 'nocrop enhanced size 640,480 font "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf,12" '
+gnuplot> set out "compound-cwnd.png"
+gnuplot> set xrange [0:500]
+gnuplot> set yrange [0:2500]
+gnuplot> plot "compound-result0" u 1:2 w li
+gnuplot> exit
+2017hw86656@BITSCSUBUNTUSSH:~$ ls
+compound-configuration  compound-result0  reno-configuration  reno-result0
+compound-cwnd.png       gnuplot.txt       reno-cwnd.png       tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ vi tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ ns tcpvariant.tcl
+start
+cmd select_ca cubic
+2017hw86656@BITSCSUBUNTUSSH:~$ ls
+compound-configuration  cubic-configuration  reno-configuration  tcpvariant.tcl
+compound-cwnd.png       cubic-result0        reno-cwnd.png
+compound-result0        gnuplot.txt          reno-result0
+2017hw86656@BITSCSUBUNTUSSH:~$ vi gnuplot.txt
+2017hw86656@BITSCSUBUNTUSSH:~$ vi gnuplot.txt
+2017hw86656@BITSCSUBUNTUSSH:~$ gnuplot
+
+        G N U P L O T
+        Version 5.0 patchlevel 3    last modified 2016-02-21
+
+        Copyright (C) 1986-1993, 1998, 2004, 2007-2016
+        Thomas Williams, Colin Kelley and many others
+
+        gnuplot home:     http://www.gnuplot.info
+        faq, bugs, etc:   type "help FAQ"
+        immediate help:   type "help"  (plot window: hit 'h')
+
+Terminal type set to 'qt'
+gnuplot> set term png
+Terminal type set to 'png'
+Options are 'nocrop enhanced size 640,480 font "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf,12" '
+gnuplot> set out "cubic-cwnd.png"
+gnuplot> set xrange [0:500]
+gnuplot> set yrange [0:2500]
+gnuplot> plot "cubic-result0" u 1:2 w li
+gnuplot> exit
+2017hw86656@BITSCSUBUNTUSSH:~$ ls
+compound-configuration  cubic-configuration  gnuplot.txt         reno-result0
+compound-cwnd.png       cubic-cwnd.png       reno-configuration  tcpvariant.tcl
+compound-result0        cubic-result0        reno-cwnd.png
+2017hw86656@BITSCSUBUNTUSSH:~$ vi tcpvariant.tcl
+2017hw86656@BITSCSUBUNTUSSH:~$ ns tcpvariant.tcl
+start
+cmd select_ca highspeed
+2017hw86656@BITSCSUBUNTUSSH:~$ ls
+compound-configuration  cubic-cwnd.png           highspeed-result0   tcpvariant.tcl
+compound-cwnd.png       cubic-result0            reno-configuration
+compound-result0        gnuplot.txt              reno-cwnd.png
+cubic-configuration     highspeed-configuration  reno-result0
+2017hw86656@BITSCSUBUNTUSSH:~$ vi gnuplot.txt
+2017hw86656@BITSCSUBUNTUSSH:~$ vi gnuplot.txt
+2017hw86656@BITSCSUBUNTUSSH:~$ gnuplot
+
+        G N U P L O T
+        Version 5.0 patchlevel 3    last modified 2016-02-21
+
+        Copyright (C) 1986-1993, 1998, 2004, 2007-2016
+        Thomas Williams, Colin Kelley and many others
+
+        gnuplot home:     http://www.gnuplot.info
+        faq, bugs, etc:   type "help FAQ"
+        immediate help:   type "help"  (plot window: hit 'h')
+
+Terminal type set to 'qt'
+gnuplot> set term png
+Terminal type set to 'png'
+Options are 'nocrop enhanced size 640,480 font "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf,12" '
+gnuplot> set out "highspeed-cwnd.png"
+gnuplot> set xrange [0:500]
+gnuplot> set yrange [0:2500]
+gnuplot> plot "highspeed-result0" u 1:2 w li
+gnuplot> exit
+2017hw86656@BITSCSUBUNTUSSH:~$ ls
+compound-configuration  cubic-cwnd.png           highspeed-cwnd.png  reno-result0
+compound-cwnd.png       cubic-result0            highspeed-result0   tcpvariant.tcl
+compound-result0        gnuplot.txt              reno-configuration
+cubic-configuration     highspeed-configuration  reno-cwnd.png
+2017hw86656@BITSCSUBUNTUSSH:~$

@@ -5,12 +5,10 @@
  */
 package clientserverchatbox;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -21,19 +19,15 @@ public class Client
 {
   public static void main(String[] args) throws Exception
   {
-     Socket sock = new Socket("127.0.0.1", 3000);
-                               // reading from keyboard (keyRead object)
-     BufferedReader keyRead = new BufferedReader(new InputStreamReader(System.in));
-                              // sending to client (pwrite object)
-     OutputStream ostream = sock.getOutputStream(); 
-     PrintWriter pwrite = new PrintWriter(ostream, true);
- 
-                              // receiving from server ( receiveRead  object)
-     InputStream istream = sock.getInputStream();
+     Socket sock = new Socket("127.0.0.1", 3000); //sock will never be close as it'll be a continuous communication.
+     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss , dd/MM/yyyy");
+     LocalDateTime now = LocalDateTime.now();                          
+     BufferedReader keyRead = new BufferedReader(new InputStreamReader(System.in));// reading from keyboard.                         
+     OutputStream ostream = sock.getOutputStream(); // sending to client.
+     PrintWriter pwrite = new PrintWriter(ostream, true);                    
+     InputStream istream = sock.getInputStream();// receiving from server.
      BufferedReader receiveRead = new BufferedReader(new InputStreamReader(istream));
- 
-     System.out.println("Start the chitchat, type and press Enter key");
- 
+     System.out.println(dtf.format(now) + " >> ");
      String receiveMessage, sendMessage;               
      while(true)
      {
@@ -42,7 +36,7 @@ public class Client
         pwrite.flush();                    // flush the data
         if((receiveMessage = receiveRead.readLine()) != null) //receive from server
         {
-            System.out.println(receiveMessage); // displaying at DOS prompt
+            System.out.println("Server: "+receiveMessage); // displaying message.
         }         
       }               
     }                    

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Application Assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body style="text-align: center;">
+
+    <h1>Login</h1>
+    <h2>Login</h2>
+    <p>Please enter username and password to login.</p>
+
+    Name: <input type="text" id="name">&nbsp;&nbsp;&nbsp;&nbsp;Password: <input type="password" id="password">
+    <button type="button" onclick="myFunction()">Submit</button><br>
+    <hr width="70%"><br>
+    <p id="success"></p>
+
+    <script>
+        setCookie = function(name, value) {
+            if (document.cookie.length > 0)
+                document.cookie += "; ";
+            document.cookie += name + ":" + value;
+        }
+
+        getCookie = function(name) {
+            var cookies = document.cookie.split(";")
+            for (var i in cookies)
+                if (name === cookies[i].split(":")[0])
+                    return cookies[i].split(":")[1];
+            return "";
+        }
+
+        $(document).ready(function() {
+            $(".lastLogin").html(getCookie("lastLogin"));
+            setCookie("lastLogin", new Date());
+            console.log(Date());
+        });
+
+        function myFunction() {
+            var x, y, text;
+            var username = "admin";
+            var today = new Date();
+            localStorage.lastVisit = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            x = document.getElementById("name").value;
+            y = document.getElementById("password").value;
+            if (x == username && y == "password123") {
+                text = '<p>Username: <b>' + username + '</b></p><p>' + 'Current Logged in Date(yy-mm-dd): <b>' + date + '</b></p><p>Logged in time: <b>' + time + '</b></p>' +
+                    '<br><br><p>Last visited on:</p><p><b>' + localStorage.lastVisit + '</b></p>';
+                document.getElementById("name").value = "";
+                document.getElementById("password").value = "";
+            } else {
+                text = "Login Failed : Please check your credentials and try again.";
+            }
+            document.getElementById("success").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>
